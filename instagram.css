@@ -1,0 +1,119 @@
+.insta
+{
+    height: 350px;
+    width: 200px;
+    border: 2px solid black;
+    margin: auto;
+    justify-content: center;
+
+    border-radius: 5%;
+   
+
+
+}
+.logo
+{
+    
+   
+    background-image: url("instalogo.html") ;
+    background-size: contain;
+    backface-visibility: hidden;
+    height: 30px;
+    width: 115px;
+
+
+}
+
+.like{
+
+height: 20px;
+width: 30px;
+
+margin-left: 120px;
+margin-top: 10px;
+
+
+}
+.send
+{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.like,.send
+{
+    display: flex;
+}
+.like,.logo{
+    display: flex;
+    margin-right: 20px;
+}
+.cir1,.cir2,.cir3,.cir4
+{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    
+}
+.cir1,.cir2,.cir3,.cir4
+{
+  float: left;
+margin-right: 15px;
+
+}
+.cir1{
+    margin-left: 10px;
+}
+.cir5
+{
+    height: 30px;
+    width: 30px;
+    border: 2px solid red;
+    border-radius: 50%;
+
+    margin-left: 5px;
+
+}
+.cir5,.user
+{
+    float: left;
+    margin-right: 10px;
+}
+
+.user,.menu
+{
+
+    float: left;
+    margin-right: 40px;
+    
+
+
+}
+.menu{
+    margin-right: 30px;
+}
+
+/* 
+.cir1
+{
+    background-image: url("c:\Users\HP\Pictures\New folder (4)\1704215924513.jpg");
+    height: 30px;
+    width: 30px;
+    } */
+.like1,.comment,.send1,.save
+{
+    float: left;
+    margin-right: 30px;
+}
+.save{
+
+    margin-left: 20px;
+}
+
+.a{
+
+    float:left;
+    font-size: small;
+    margin-left: 10px;
+}

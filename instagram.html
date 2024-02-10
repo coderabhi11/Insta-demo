@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="instagram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="insta">
+       
+   
+        <div class="logo">
+        
+        <div class="like"><i class="fa-regular fa-heart"></i>
 
+         <div class="send"><i class="fa-regular fa-paper-plane"></i>
+
+     </div>
+        
+          </div>
+           
+                </div>
+
+                <br>
+                <div class="cir1">
+                  <img src="c:\Users\HP\Pictures\New folder (4)\1704215924513.jpg" height="30px" width="30px" style="border-radius: 50%;">
+      
+                </div>
+
+                <div class="cir2">
+               
+                  <img src="c:\Users\HP\Pictures\New folder (4)\1698890260476.jpg" height="30px" width="30px" style="border-radius: 50%;">
+                     
+                </div>
+
+                <div class="cir3">
+                  <img src="c:\Users\HP\Pictures\New folder (2)\1000008610.jpg" height="30px" width="30px" style="border-radius: 50%;">
+
+
+                </div>
+                <div class="cir4">
+                  <img src="c:\Users\HP\Pictures\New folder (2)\1000018657.jpg" height="30px" width="30px" style="border-radius: 50%;">
+
+
+
+                </div>
+<br>
+                <br>
+                <div class="a">
+                  <a style="margin-right: 12px;">    A_02</a>
+
+                  <a style="margin-right: 12px;">  K_01</a>
+                <a style="margin-right: 12px"> S@_11</a>
+                <a style="margin-right:12px;">T_21</a>
+                  </div>
+              <br>
+              <br>
+
+                <div class="cir5">
+                  <img src="c:\Users\HP\Pictures\Saved Pictures\wallpaper.jpg " height="30px" width="30px" style="border-radius: 50%;">
+
+                <br>
+                <br>
+                
+                <!-- <input type="image" src="c:\Users\HP\Pictures\Saved Pictures\wallpaper.jpg" alt="Abhi" style="height: 100px; width: 100px; ">         -->
+                <!-- <img src="c:\Users\HP\Pictures\Saved Pictures\wallpaper.jpg" height="160px" width="190px" > -->
+
+                </div>
+              <div class="user"><label>User Name </label></div>  
+              <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div> 
+
+                <br>
+                <br>
+
+                <img src="c:\Users\HP\Pictures\Saved Pictures\wallpaper.jpg" height="160px" width="200px" >
+
+
+                <br>
+                
+
+                        
+                <div class="like1">      <i class="fa-regular fa-heart"></i> </div>
+
+                <div class="comment"><i class="fa-regular fa-comment"></i> </div>
+
+                <div class="send1">  <i class="fa-regular fa-paper-plane"></i> </div>
+                
+                <div class="save"> <i class="fa-regular fa-bookmark"></i></div>   
+
+                <br>
+                <br>
+         
+                <style>
+                  /* CSS styles */
+                  body {
+                      font-family: Arial, sans-serif;
+                      margin: 0;
+                      padding: 0;
+                  }
+                  .container {
+                      max-width: 600px;
+                      margin: 20px auto;
+                      padding: 20px;
+                      border: 1px solid #ccc;
+                      border-radius: 5px;
+                  }
+                  .post {
+                      margin-bottom: 20px;
+                      border-bottom: 1px solid #ccc;
+                      padding-bottom: 10px;
+                  }
+                  .post img {
+                      max-width: 100%;
+                      height: auto;
+                  }
+                  .description {
+                      font-style: italic;
+                      color: #666;
+                  }
+                  .likes {
+                      margin-top: 10px;
+                  }
+               </style>
+              <br>
+              
+              <div class="container">
+                  <!-- Form to upload photo -->
+                  <form id="uploadForm">
+                      <input type="file" id="photoInput" accept="image/*" required>
+                      <br>
+                      
+                      <br>
+                      <textarea id="descriptionInput" placeholder="Optional description"></textarea>
+                      <br>
+                      <br>
+                      <button type="submit" style="color: blue; margin: auto; justify-content: auto;">     Upload</button>
+                  </form>
+              
+                  <!-- Display uploaded posts -->
+                  <div id="postsContainer"></div>
+              </div>
+              
+              <script>
+                  // JavaScript code
+                  document.getElementById('uploadForm').addEventListener('submit', function(event) {
+                      event.preventDefault(); // Prevent form submission
+              
+                      // Get input values
+                      var photo = document.getElementById('photoInput').files[0];
+                      var description = document.getElementById('descriptionInput').value;
+              
+                      // Create new post element
+                      var post = document.createElement('div');
+                      post.classList.add('post');
+              
+                      // Display uploaded photo
+                      var img = document.createElement('img');
+                      img.src = URL.createObjectURL(photo);
+                      post.appendChild(img);
+              
+                      // Display description if available
+                      if (description.trim() !== '') {
+                          var desc = document.createElement('p');
+                          desc.textContent = description;
+                          desc.classList.add('description');
+                          post.appendChild(desc);
+                      }
+              
+                      // Add like button
+                      
+                      var likeBtn = document.createElement('button');
+                      likeBtn.textContent = 'Like';
+                      likeBtn.addEventListener('click', function() {
+                          // Increment like count or perform other actions
+                          alert('Liked!');
+                      });
+                      post.appendChild(likeBtn);
+              
+                      
+                      // Add comment section
+                      var commentInput = document.createElement('input');
+                      commentInput.type = 'text';
+                      commentInput.placeholder = 'Add a comment';
+                      post.appendChild(commentInput);
+              
+                      var commentBtn = document.createElement('button');
+                      commentBtn.textContent = 'Comment';
+                      commentBtn.addEventListener('click', function() {
+                          var comment = commentInput.value;
+                          // Save comment or perform other actions
+                          alert('Commented: ' + comment);
+                      });
+                      post.appendChild(commentBtn);
+              
+                      // Append post to container
+                      document.getElementById('postsContainer').appendChild(post);
+                  });
+              </script>
+              
+              
+                   
+                     </div>
+    
+
+
+
+
+<script src="instagram.js"></script>
+
+</body>
+</html>
